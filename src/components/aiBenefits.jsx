@@ -62,24 +62,41 @@ const AiBenefits = () => {
     }
   ];
 
+  const colorClasses = {
+    primary: "bg-primary/10 text-primary",
+    secondary: "bg-secondary/10 text-secondary",
+    accent: "bg-accent/10 text-accent",
+  };
+
   return (
-    <section id="benefits" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gradient-to-br from-dark to-gray-900 rounded-3xl text-white over">
+    <section
+      id="benefits"
+      className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gradient-to-br from-dark to-gray-900 rounded-3xl text-white over"
+    >
       <div className="text-center mb-12">
         <span className="text-primary font-semibold">AI Benefits</span>
         <h2 className="text-3xl md:text-4xl font-bold mt-2 text-white">
-          How AI is <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          How AI is{" "}
+          <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
             Transforming Our World
           </span>
         </h2>
         <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
-          Discover the positive impact of AI across various sectors and industries.
+          Discover the positive impact of AI across various sectors and
+          industries.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {benefits.map((benefit, index) => (
-          <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-primary/30 transition-all">
-            <div className={`w-12 h-12 rounded-lg bg-${benefit.color}/10 flex items-center justify-center mb-4 text-${benefit.color}`}>
+          <div
+            key={index}
+            className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-primary/30 transition-all"
+          >
+            <div
+              className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${colorClasses[benefit.color]
+                }`}
+            >
               {benefit.icon}
             </div>
             <h3 className="text-xl font-bold text-white">{benefit.title}</h3>
