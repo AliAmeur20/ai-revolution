@@ -1,6 +1,6 @@
 const HeroSection = () => {
   return (
-    <section id="home" className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="home" className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">

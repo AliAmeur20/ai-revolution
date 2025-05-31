@@ -63,7 +63,7 @@ const AiBenefits = () => {
   ];
 
   return (
-    <section id="benefits" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gradient-to-br from-dark to-gray-900 rounded-3xl text-white">
+    <section id="benefits" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gradient-to-br from-dark to-gray-900 rounded-3xl text-white over">
       <div className="text-center mb-12">
         <span className="text-primary font-semibold">AI Benefits</span>
         <h2 className="text-3xl md:text-4xl font-bold mt-2 text-white">
