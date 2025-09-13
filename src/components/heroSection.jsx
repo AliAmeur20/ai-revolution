@@ -7,7 +7,7 @@ const images = [
 
 const HeroSection = () => {
   return (
-    <section id="home" className="app-container pt-24 pb-12">
+    <section id="home" className="app-container pt-24 pb-12 overflow-hidden sm:overflow-visible">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left content */}
         <div className="space-y-6">
