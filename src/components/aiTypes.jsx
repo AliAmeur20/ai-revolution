@@ -1,5 +1,4 @@
-const AiTypes = () => {
-  const aiTypes = [
+const aiTypes = [
     {
       title: "Machine Learning",
       description: "Systems that learn and improve from experience without being explicitly programmed.",
@@ -13,7 +12,6 @@ const AiTypes = () => {
         { text: "Predictive", color: "primary" },
         { text: "Adaptive", color: "secondary" }
       ],
-      gradient: "from-blue-100 to-purple-100"
     },
     {
       title: "Neural Networks",
@@ -28,7 +26,6 @@ const AiTypes = () => {
         { text: "Deep Learning", color: "primary" },
         { text: "Complex Data", color: "accent" }
       ],
-      gradient: "from-purple-100 to-pink-100"
     },
     {
       title: "Natural Language Processing",
@@ -43,50 +40,58 @@ const AiTypes = () => {
         { text: "Chatbots", color: "secondary" },
         { text: "Translation", color: "accent" }
       ],
-      gradient: "from-pink-100 to-red-100"
     }
   ];
 
+  const tagColors = {
+    primary: "bg-primary/10 text-primary",
+    secondary: "bg-secondary/10 text-secondary",
+    accent: "bg-accent/10 text-accent",
+  };
+
+const AiTypes = () => {
+
   return (
-    <section id="types" className="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="types" className="app-container py-16">
       <div className="text-center mb-12">
-        <span className="text-primary font-semibold">AI Technologies</span>
-        <h2 className="text-3xl md:text-4xl font-bold mt-2">
-          Different Types of <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-            Artificial Intelligence
-          </span>
+        <span className="section-subheader">AI Technologies</span>
+        <h2 className="section-header">
+          Different Types of{" "}
+          <span className="gradient-text">Artificial Intelligence</span>
         </h2>
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+        <p className="section-description">
           Explore the diverse landscape of AI technologies that are shaping our future.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {aiTypes.map((type, index) => (
-          <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-xl hover:-translate-y-1">
-            <div className={`h-48 bg-gradient-to-r ${type.gradient} flex items-center justify-center`}>
-              <img alt={type.title.toLowerCase()} src={type.image} className="w-full h-full object-cover" />
-            </div>
+        {aiTypes.map((type) => (
+          <article key={type.title} className="ai-type-card">
+            <img
+              alt={type.title}
+              src={type.image}
+              className="ai-type-card-image"
+            />
             <div className="p-6">
               <div className="flex items-center mb-3">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-3">
+                <div className="ai-type-card-icon">
                   {type.icon}
                 </div>
                 <h3 className="text-xl font-bold">{type.title}</h3>
               </div>
               <p className="mt-2 text-gray-600">{type.description}</p>
-              <div className="mt-4 flex items-center">
-                {type.tags.map((tag, tagIndex) => (
+              <div className="mt-4 flex items-center space-x-2">
+                {type.tags.map((tag) => (
                   <span
-                    key={tagIndex}
-                    className={`inline-block px-3 py-1 text-xs font-semibold rounded-full bg-${tag.color}/10 text-${tag.color} ${tagIndex > 0 ? 'ml-2' : ''}`}
+                    key={tag.text}
+                    className={`ai-type-card-tag ${tagColors[tag.color]}`}
                   >
                     {tag.text}
                   </span>
                 ))}
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>

@@ -8,7 +8,7 @@ import Footer from '../components/footer'
 
 function Home() {
   return (
-    <div className="font-sans bg-gradient-to-br from-gray-50 to-gray-100 text-dark">
+    <>
       <Navbar />
       <main>
         <HeroSection />
@@ -17,7 +17,7 @@ function Home() {
         <Contact />
       </main>
       <Footer />
-    </div>
+    </>
   )
 }
 
